@@ -1,3 +1,5 @@
+/// <reference path="MapsCreatr.ts" />
+
 declare module MapsCreatr {
     interface IMapsCreatrMapRaw {
         name: string;
@@ -103,7 +105,7 @@ declare module MapsCreatr {
     /**
      * 
      */
-    interface IThing {
+    export interface IThing {
         // The name of the Thing's constructor type, from the MapsCreatr's ObjectMakr.
         title: string;
 
@@ -114,17 +116,17 @@ declare module MapsCreatr {
         noBoundaryStretch?: boolean;
     }
 
-    interface IMapsCreatrEntrance {
+    export interface IMapsCreatrEntrance {
         (scope: any, location: IMapsCreatrLocation);
     }
 
-    interface IMapsCreatrMacro {
+    export interface IMapsCreatrMacro {
         (
         reference: any,
-        prethings: { [i: string]: PreThing[] },
+        prethings: { [i: string]: MapsCreatr.PreThing[] },
         area: IMapsCreatrArea | IMapsCreatrAreaRaw,
         map: IMapsCreatrMap | IMapsCreatrAreaRaw,
         scope: any
-        ): PreThing | PreThing[];
+        ): MapsCreatr.PreThing | MapsCreatr.PreThing[];
     }
 }

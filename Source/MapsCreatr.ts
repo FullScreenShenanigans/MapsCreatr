@@ -2,7 +2,9 @@
 /// <reference path="MapsCreatrObjects.d.ts" />
 
 module MapsCreatr {
-    interface IMapsCreatrSettings {
+    "use strict";
+
+    export interface IMapsCreatrSettings {
         // An ObjectMakr used to create Maps and Things. Note that it must store 
         // full properties of Things, for quick size lookups.
         ObjectMaker: ObjectMakr;
@@ -44,7 +46,7 @@ module MapsCreatr {
      * sizing and positioning information, so that a MapsHandler may accurately
      * spawn or unspawn it as needed.
      */
-    class PreThing {
+    export class PreThing {
         // The contained Thing to be placed during gameplay.
         public thing: IThing;
 
