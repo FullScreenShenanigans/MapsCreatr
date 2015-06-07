@@ -1,7 +1,7 @@
 /// <reference path="MapsCreatr.ts" />
 
 declare module MapsCreatr {
-    interface IMapsCreatrMapRaw {
+    export interface IMapsCreatrMapRaw {
         name: string;
         locations: {
             [i: string]: IMapsCreatrLocationRaw;
@@ -12,16 +12,16 @@ declare module MapsCreatr {
         };
     }
 
-    interface IMapsCreatrAreaRaw {
+    export interface IMapsCreatrAreaRaw {
         creation: any[];
     }
 
-    interface IMapsCreatrLocationRaw {
+    export interface IMapsCreatrLocationRaw {
         entry?: string;
         area?: number | string;
     }
 
-    interface IMapsCreatrMap {
+    export interface IMapsCreatrMap {
         // Whether the Map has had its areas and locations set in getMap.
         initialized: boolean;
 
@@ -35,7 +35,7 @@ declare module MapsCreatr {
         locations: any;
     }
 
-    interface IMapsCreatrArea {
+    export interface IMapsCreatrArea {
         // The user-friendly label for this Area.
         name: string;
 
@@ -65,7 +65,7 @@ declare module MapsCreatr {
         stretches?: string[];
     }
 
-    interface IMapsCreatrLocation {
+    export interface IMapsCreatrLocation {
         // The user-friendly label for this Location.
         name: string;
 
@@ -82,7 +82,7 @@ declare module MapsCreatr {
     /**
      * 
      */
-    interface IPreThingSettings {
+    export interface IPreThingSettings {
         // The horizontal starting location of the Thing (by default, 0).
         x?: number;
 
