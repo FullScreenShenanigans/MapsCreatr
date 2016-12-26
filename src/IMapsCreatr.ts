@@ -1,4 +1,4 @@
-import { IObjectMakr } from "objectmakr/lib/iobjectmakr";
+import { IObjectMakr } from "objectmakr/lib/IObjectMakr";
 
 import { IPreThing, IPreThingSettings } from "./IPreThing";
 
